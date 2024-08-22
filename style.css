@@ -1,0 +1,101 @@
+/* ------------------------------------- GLOBALES --------------------------------------- */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+p{
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* -------------------------------------------------------------------------------------- */
+.contenedor {
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 95%;
+}
+
+.contenedor h1, p{
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contenedor-anuncios {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .contenedor-anuncios {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3,1fr);
+  }
+}
+
+img, picture {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+}
+
+.anuncio {
+  background-color: #eee;
+  border: 0.5px solid #c8c8c8;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .anuncio {
+    margin: 0;
+  }
+}
+
+.anuncio:last-of-type {
+  margin-bottom: 0;
+}
+
+.anuncio h3 {
+  font-weight: 400;
+  font-size: 2.9rem;
+}
+
+.anuncio p{
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+
+.anuncio h3,
+.anuncio p {
+  margin: 0;
+}
+
+.contenido-anuncio {
+  padding: 2rem;
+  text-align: center;
+}
+
+.precio {
+  color: #71b100;
+  font-size: 3rem;
+  font-weight: 400;
+  padding: 1rem;
+}
+
+/* =========  fin ======= */
