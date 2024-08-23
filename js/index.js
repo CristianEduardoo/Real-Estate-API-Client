@@ -1,20 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   function getPropiedades(done) {
+    // Hacer una petición a la API para obtener las propiedades
     const results = fetch("https://pypycris.pythonanywhere.com/api/v1/propiedades/");
     
     results
       .then((response) => response.json())
       .then((data) => {
         done(data);
+      })
+      .catch((error) => {
+        console.error("Error al obtener la petición a la Api propiedades:", error);
       });
   }
 
   getPropiedades((data) => {
+    // Crear el HTML para casa propiedad
     data.forEach((propiedades) => {
       const contenedor = document.createRange().createContextualFragment(
         `
-          <div class="anuncio">
+          <div class="anuncio" data-id="${propiedades.id}">
               <picture>
                   <source srcset="${propiedades.img}" type="image/webp">
                   <img loading="lazy" width="200" height="300" src="${propiedades.img}" alt="Imagen de la propiedad">
@@ -57,4 +62,15 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+
+  // Agregar Event Listener a los anuncios
+  document.querySelector(".contenedor-anuncios").addEventListener("click", function (event) {
+    const anuncio = event.target.closest(".anuncio");
+    if (anuncio) {
+      console.log(anuncio);
+      const id = anuncio.getAttribute("data-id");
+      window.location.href = `details.html?id=${id}`;
+    }
+  });
+
 });

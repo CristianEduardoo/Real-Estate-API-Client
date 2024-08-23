@@ -1,0 +1,99 @@
+/* ------------------------------------- GLOBALES --------------------------------------- */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------------------- */
+.contenedor {
+  margin: 0 auto;
+  max-width: 120rem;
+  width: 95%;
+}
+
+h1 {
+  text-align: center;
+}
+
+img,
+picture {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.details {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.details .iconos-caracteristicas {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+.iconos-caracteristicas li {
+  align-items: center;
+  column-gap: 1rem;
+  display: flex;
+}
+
+@media (min-width: 992px) {
+  .details {
+    max-width: 70%;
+  }  
+
+  .div_blogDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 5rem;
+  }
+}
+
+.precio {
+  color: #71b100;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.btn{
+  display: flex;
+  justify-content: end;
+}
+
+.volver{
+    background-color: #619800;
+    cursor: pointer;
+    color: #fff;
+    display: ruby-base;
+    font-weight: 700;
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}

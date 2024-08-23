@@ -21,6 +21,10 @@ p{
   font-weight: 300;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* -------------------------------------------------------------------------------------- */
 .contenedor {
   margin: 0 auto;
@@ -59,6 +63,10 @@ img, picture {
   background-color: #eee;
   border: 0.5px solid #c8c8c8;
   margin-bottom: 2rem;
+}
+
+.anuncio:hover{
+  cursor: pointer;
 }
 
 @media (min-width: 768px) {
