@@ -24,7 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
         <h1>${propiedad.titulo}</h1>
                 
         <div class="details">
+            <p><span class="precio">${propiedad.precio}€</span></p>
+
             <ul class="iconos-caracteristicas">
+                <li>
+                    <img class="icono" loading="lazy" src="../Favicons/icono_dormitorio.svg" alt="icono habitaciones">
+                    <p>${propiedad.habitaciones}</p>
+                </li>
                 <li>
                     <img class="icono" loading="lazy" src="../Favicons/icono_wc.svg" alt="icono wc">
                     <p>${propiedad.wc}</p>
@@ -33,13 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <img class="icono" loading="lazy" src="../Favicons/icono_estacionamiento.svg" alt="icono estacionamiento">
                     <p>${propiedad.garaje}</p>
                 </li>
-                <li>
-                    <img class="icono" loading="lazy" src="../Favicons/icono_dormitorio.svg" alt="icono habitaciones">
-                    <p>${propiedad.habitaciones}</p>
-                </li>
             </ul>  
-
-            <p><span class="precio">${propiedad.precio}€</span></p>
         </div>
                       
         <div class="div_blogDetails">
